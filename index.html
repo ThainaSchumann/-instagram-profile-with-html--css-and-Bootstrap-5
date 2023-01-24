@@ -22,11 +22,13 @@
           <a class="navbar-brand" href="https://www.instagram.com/viajandoeaprendendo2019/" target="_blank">
             <img src="img/logo.png" style=" max-width:130px; max-height:80px;">
         </a>
+
+        <!----Formular----->
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="pesquisar" aria-label="search">
         </form> 
           <div style="width: 30%;" >
-            <!---icons---->
+            <!---icons-Bootstrap--->
               <i class="bi bi-house-door icons">
               <i class="bi bi-inbox icons"></i>
               <a class="bi bi-compass icons"></a>
@@ -44,28 +46,30 @@
         <div class="container">
           <div class="row">
             <div class="col-0 col-md-2"></div>
-            <div class="col-12 col-md-8">
-              <div class="row" style="padding-top: 20px;">
-
-                <!----Foto profile---->
-                <div class="container">
+            <div class="col-12 col-md-8"></div>
+            <div class="container">
                   <div class="row" style="padding-top: 20px;">
+                     <!----Profile Foto----->
                       <div class="col-3">
-                          <img class="img-profile" src="images/foto-instagram.jpg"><!---Instagram logo---> 
+                          <img class="img-profile" src="img/foto-instagram.jpg">
                       </div>
+                      <!--end--Profile Foto----->
+ 
+                      <!---info----->
                       <div class="col-7">
                           <div class="row" style="padding-top: 20px; padding-bottom: 10px;">
                               <div class="col-8 col-lg-5">
                                   <h2 class="username">schumann_thaina</h2>
                               </div>
-                              <div class="col-4 col-lg-6"><button type="button"
-                                      class="btn btn-outline-secondary button-edit">Edit profile
-                                      </button></div>
+                              <div class="col-4 col-lg-6">
+                                <button type="button" class="btn btn-outline-secondary button-edit">Edit profile
+                                </button>
                           </div>
-
+                          </div>
+                          <!---row 1----->
                           <div class="row">
                             <div class="col-4">
-                                <p class="profile-datas"><strong>194</strong> publications</p>
+                                <p class="profile-datas"><strong>500</strong> publications</p>
                             </div>
                             <div class="col-4">
                                 <p class="profile-datas"><strong>5.300</strong> followers</p>
@@ -74,11 +78,13 @@
                                 <p class="profile-datas"><strong>667</strong> following</p>
                             </div>
                         </div>
+                        <!---row 2----->
                         <div class="row">
                             <div class="col-12">
                                 <h1 class="name">Thaina Schumann</h1>
                             </div>
                         </div>
+                        <!---row 3----->
                         <div class="row">
                             <div class="col-12">
                                 <p class="profile-desc">Frontend | Developer 👩🏽‍💻</p>
@@ -89,15 +95,70 @@
                 </div>
             </div>
 
-                
+            <!-- Stories-in the shape of circles------>
+            <div style="padding-top: 0px;">
+              <div class="row">
+                  <div class="col-2"> <canvas id="myCrl"></canvas></div>
+                  <div class="col-2"> <canvas id="myCrl1"></canvas></div>
+                  <div class="col-2"> <canvas id="myCrl2"></canvas></div>
+              </div>
+          </div>
+          <div style="padding-bottom: 40px;">
+              <div class="row">
+                  <div class="col-2 stories"> Checklist</div>
+                  <div class="col-2 stories"> Youtube</div>
+                  <div class="col-2 stories"> Developer</div>
+              </div>
+          </div>
 
     </section>
 
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    
-    
-  </body>
+    <!----connect JS with canvas-------->
+    <!----shape of circles with colors-------->
+    <script type="text/javascript">
+
+      var crl = document.getElementById('myCrl').getContext('2d');
+
+      crl.beginPath();
+      crl.arc(60, 100, 40, 0, 2 * Math.PI);
+      crl.fillStyle = '#00ACC1';
+      crl.fill();
+      crl.linewidth = 5;
+      crl.strokeStyle = '#dbdbdb';
+      crl.stroke();
+
+      var crl1 = document.getElementById('myCrl1').getContext('2d');
+
+        crl1.beginPath();
+        crl1.arc(60, 100, 40, 0, 2 * Math.PI);
+        crl1.fillStyle = '#F8BBD0';
+        crl1.fill();
+        crl1.linewidth = 5;
+        crl1.strokeStyle = '#dbdbdb';
+        crl1.stroke();
+
+        var crl2 = document.getElementById('myCrl2').getContext('2d');
+
+        crl2.beginPath();
+        crl2.arc(60, 100, 40, 0, 2 * Math.PI);
+        crl2.fillStyle = '#E91E63';
+        crl2.fill();
+        crl2.linewidth = 5;
+        crl2.strokeStyle = '#dbdbdb';
+        crl2.stroke();
+
+      </script>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>

@@ -14,6 +14,14 @@
     padding-right: 25% !important;
 }
 
+.profile-container{
+    width: 100%;
+    max-width: 100px;
+    position: relative;
+    padding-bottom: 100%;
+
+}
+
 @media screen and (max-width: 1605px) {
     .nav-container {
         padding-left: 20% !important; 
@@ -29,21 +37,19 @@
 }
 
 .img-nav {
-    border-radius: 100%;
-    -o-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%; 
-    max-width:30px; 
+    border-radius:50%;
+    max-width:30px;
     max-height:25px;
 }
 
 .img-profile {
-    border-radius: 100%;
-    -o-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%; 
-    max-width:200px; 
-    max-height:150px;
+    border-radius: 50%;
+    border-style: double;
+    border-color: blue;
+    width:100%; 
+    display: block;
+    height:100%;
+    position: absolute;
 }
 
 .username {
